@@ -6,7 +6,7 @@
         $confirmPassword = $_POST["confirmPassword"];
         if($yourPassword === $confirmPassword){
             $sql = "INSERT INTO users (name,email,password) VALUES ('$yourName','$yourEmail','$yourPassword')";
-            if($conn->query($sql) === TRUE){
+            if($conn->query($sql) === TRUE){ /*not working */
                echo "<script>toastr.succcess('Register Successfull');setTimeout(()=> {location.href='login.php'},2000)</script>";
             }
             else{
